@@ -2,9 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.container {
-}
-
 .firstAnchor {
   display: block;
   position: relative;
@@ -22,6 +19,7 @@ html {
 body {
   overflow-x: hidden;
   width: 100%;
+  background-color: #e0e0e0;
 }
 
 .navBar {
@@ -63,6 +61,7 @@ body {
   justify-content: center;
   align-items: center;
   margin: 10px 0;
+  flex-wrap: wrap;
 }
 
 .flextrueCenter {
@@ -115,7 +114,7 @@ body {
 }
 
 .logo {
-  width: 100%;
+  width: 80%;
   max-width: 300px;
   position: fixed;
   top: 30px;
@@ -155,11 +154,19 @@ body {
 
 .fullWidth {
   width: 100%;
-  margin-right: 10px;
 }
 
 img {
   max-width: 500px;
+  min-width: 200px;
+}
+
+video {
+  max-width: 500px;
+}
+
+.screen-size-container video {
+  max-width: 100%;
 }
 
 .arrow {
@@ -244,15 +251,15 @@ img {
 footer {
   padding: 20px;
   text-align: center;
-  background-color: grey;
+  background-color: rgb(0, 0, 0);
 }
 
 footer a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 footer a:hover {
-  transform: scale(1.2);
-  color: rgb(53, 53, 53);
+  text-decoration: underline;
+  color: #fff;
 }
