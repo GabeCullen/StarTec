@@ -61,7 +61,14 @@ body {
   justify-content: center;
   align-items: center;
   margin: 10px 0;
-  flex-wrap: wrap;
+  gap: 35px;
+  flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 769px) {
+    .flexCenter {
+        flex-wrap: wrap;
+    }
 }
 
 .flextrueCenter {
@@ -119,6 +126,7 @@ body {
   position: fixed;
   top: 30px;
   left: 30px;
+  z-index: 100;
 }
 
 .fakelogo {
@@ -185,6 +193,14 @@ video {
 
 .half-width {
   width: 50%;
+}
+
+.two-thirds-width {
+  width: 66%;
+}
+
+.eighty-percent-width {
+    width: 80%;
 }
 
 .heavensFamily {
@@ -286,4 +302,136 @@ footer a:hover {
 .wrapper {
   overflow: hidden;
   max-width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+    .show-large{
+        display: block;
+    }
+    
+    .show-small{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .show-small{
+        display: block;
+    }
+
+    .show-large{
+        display: none;
+    }
+
+    .frame-container{
+        padding-bottom: 130%;
+    }
+}
+
+.row {
+    gap: 15px;
+    margin: 0; 
+}
+
+.row * {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+form {
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .col {
+        flex: 1 0 34%;
+    }
+}
+
+
+
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+section.small .shot-images {
+  width: 220px;
+  height: 165px;
+}
+
+.shot-images {
+  display: flex !important;
+  flex-wrap: nowrap;
+  width: 600px;
+  height: 650px;
+  margin: 1em;
+  overflow: hidden;
+  background: #e0e0e0;
+  border-radius: 8px;
+  position: relative;
+  counter-reset: art-thumb-count;
+}
+.shot-images > *:first-child {
+  z-index: 0;
+  position: static;
+  overflow: visible;
+}
+.shot-images > *:first-child > img {
+  opacity: 1;
+}
+.shot-images.hover > *:first-child,
+.shot-images.hover > * {
+  position: relative !important;
+  z-index: 1 !important;
+}
+.shot-images.hover > *:first-child > img,
+.shot-images.hover > * > img {
+  opacity: 0;
+}
+.shot-images.hover > *:first-child:hover,
+.shot-images.hover > *:hover {
+  position: static !important;
+  z-index: 0 !important;
+  overflow: visible !important;
+}
+.shot-images.hover > *:first-child:hover > img,
+.shot-images.hover > *:hover > img {
+  opacity: 1 !important;
+}
+.shot-images > * {
+  flex: 1 !important;
+  width: 0 !important;
+  border-radius: 0 !important;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  counter-increment: art-thumb-count;
+}
+.shot-images > * > img {
+  min-width: 100%;
+  height: auto !important;
+  max-width: 100%;
+  width: auto !important;
+  border-radius: 8px !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  display: block;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.display_none{
+    display: none;
+}
+
+.display_block{
+    display: block;
 }
